@@ -98,6 +98,5 @@ của cùng một hàm:
 `Employee` và hai `SoftwareEngineer` bằng các constructor khác nhau, tăng
 lương theo hai cách, tạo `ProjectTeam`, thêm/xóa/đổi trưởng nhóm, hiển thị
 đa hình, và cuối cùng dùng một hàm con (`demo_scope_block`) để mô phỏng việc
-hủy một `ProjectTeam` khi ra khỏi phạm vi (tương đương kết thúc khối lệnh
-`{ }` trong C++), đồng thời chứng minh `Employee` dùng chung vẫn tồn tại sau
+hủy một `ProjectTeam` khi ra khỏi phạm vi, đồng thời chứng minh `Employee` dùng chung vẫn tồn tại sau
 đó (do quan hệ aggregation không sở hữu).
