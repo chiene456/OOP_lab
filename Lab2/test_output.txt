@@ -1,0 +1,53 @@
+test_amount_negative (test_payroll.TestBonusOverload.test_amount_negative) ... ok
+test_amount_zero (test_payroll.TestBonusOverload.test_amount_zero) ... ok
+test_blank_reason (test_payroll.TestBonusOverload.test_blank_reason) ... ok
+test_empty_reason (test_payroll.TestBonusOverload.test_empty_reason) ... ok
+test_failed_bonus_does_not_change_state (test_payroll.TestBonusOverload.test_failed_bonus_does_not_change_state) ... ok
+test_rate_above_half (test_payroll.TestBonusOverload.test_rate_above_half) ... ok
+test_rate_half_boundary (test_payroll.TestBonusOverload.test_rate_half_boundary) ... ok
+test_rate_zero (test_payroll.TestBonusOverload.test_rate_zero) ... ok
+test_reason_as_keyword (test_payroll.TestBonusOverload.test_reason_as_keyword) ... ok
+test_reference_zero (test_payroll.TestBonusOverload.test_reference_zero) ... ok
+test_reset (test_payroll.TestBonusOverload.test_reset) ... ok
+test_three_versions_accumulate (test_payroll.TestBonusOverload.test_three_versions_accumulate) ... ok
+test_two_numbers_is_ambiguous (test_payroll.TestBonusOverload.test_two_numbers_is_ambiguous) ... ok
+test_wrong_arity (test_payroll.TestBonusOverload.test_wrong_arity) ... ok
+test_exactly_160_hours_no_overtime (test_payroll.TestHourly.test_exactly_160_hours_no_overtime) ... ok
+test_hours_above_250 (test_payroll.TestHourly.test_hours_above_250) ... ok
+test_max_250_hours (test_payroll.TestHourly.test_max_250_hours) ... ok
+test_negative_hours (test_payroll.TestHourly.test_negative_hours) ... ok
+test_negative_rate (test_payroll.TestHourly.test_negative_rate) ... ok
+test_zero_hours (test_payroll.TestHourly.test_zero_hours) ... ok
+test_employee_is_abstract (test_payroll.TestInvariantsAndConstructors.test_employee_is_abstract) ... ok
+test_empty_department (test_payroll.TestInvariantsAndConstructors.test_empty_department) ... ok
+test_empty_id (test_payroll.TestInvariantsAndConstructors.test_empty_id) ... ok
+test_empty_name (test_payroll.TestInvariantsAndConstructors.test_empty_name) ... ok
+test_negative_allowance (test_payroll.TestInvariantsAndConstructors.test_negative_allowance) ... ok
+test_negative_initial_bonus (test_payroll.TestInvariantsAndConstructors.test_negative_initial_bonus) ... ok
+test_negative_salary (test_payroll.TestInvariantsAndConstructors.test_negative_salary) ... ok
+test_short_constructor_defaults (test_payroll.TestInvariantsAndConstructors.test_short_constructor_defaults) ... ok
+test_add_non_employee (test_payroll.TestPayroll.test_add_non_employee) ... ok
+test_duplicate_id_rejected (test_payroll.TestPayroll.test_duplicate_id_rejected) ... ok
+test_empty_payroll (test_payroll.TestPayroll.test_empty_payroll) ... ===== BẢNG LƯƠNG KỲ 2026-10 =====
+ok
+test_empty_period (test_payroll.TestPayroll.test_empty_period) ... ok
+test_find_missing_returns_none (test_payroll.TestPayroll.test_find_missing_returns_none) ... ok
+test_commission_above_bound (test_payroll.TestSales.test_commission_above_bound) ... ok
+test_commission_negative (test_payroll.TestSales.test_commission_negative) ... ok
+test_commission_upper_bound (test_payroll.TestSales.test_commission_upper_bound) ... ok
+test_update_revenue (test_payroll.TestSales.test_update_revenue) ... ok
+test_update_revenue_negative (test_payroll.TestSales.test_update_revenue_negative) ... ok
+test_department_support (test_payroll.TestSampleData.test_department_support) ... ok
+test_e001_salaried (test_payroll.TestSampleData.test_e001_salaried) ... ok
+test_e002_hourly_no_overtime (test_payroll.TestSampleData.test_e002_hourly_no_overtime) ... ok
+test_e003_hourly_overtime (test_payroll.TestSampleData.test_e003_hourly_overtime) ... ok
+test_e004_sales_with_rate_bonus (test_payroll.TestSampleData.test_e004_sales_with_rate_bonus) ... ok
+test_highest_paid (test_payroll.TestSampleData.test_highest_paid) ... ok
+test_polymorphic_types (test_payroll.TestSampleData.test_polymorphic_types) ... ok
+test_total_payroll (test_payroll.TestSampleData.test_total_payroll) ... ok
+test_unknown_department_is_zero (test_payroll.TestSampleData.test_unknown_department_is_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.002s
+
+OK
