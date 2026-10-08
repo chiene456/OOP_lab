@@ -13,7 +13,8 @@ public abstract class Device {
         Retired
     }
 
-    private String Ma_thiet_bi;
+    // Mã thiết bị chỉ được thiết lập khi khởi tạo, không thể thay đổi sau đó.
+    private final String Ma_thiet_bi;
     private String Ten_thiet_bi;
     private int Nam_su_dung;
     private double Gia_mua;
@@ -54,7 +55,10 @@ public abstract class Device {
     }
 
     public void Set_ten_thiet_bi(String Ten_thiet_bi) {
-        this.Ten_thiet_bi = Ten_thiet_bi;
+        if (Ten_thiet_bi == null || Ten_thiet_bi.trim().isEmpty()) {
+            throw new IllegalArgumentException("Tên thiết bị không được rỗng");
+        }
+        this.Ten_thiet_bi = Ten_thiet_bi.trim();
     }
 
     public int Get_nam_su_dung() {
@@ -62,7 +66,16 @@ public abstract class Device {
     }
 
     public void Set_nam_su_dung(int Nam_su_dung) {
+        int Nam_hien_tai = Year.now().getValue();
+
+        if (Nam_su_dung <= 0 || Nam_su_dung > Nam_hien_tai) {
+            throw new IllegalArgumentException("Năm sử dụng không hợp lệ");
+        }
         this.Nam_su_dung = Nam_su_dung;
+    }
+
+    public int Get_so_nam_su_dung() {
+        return Year.now().getValue() - this.Nam_su_dung;
     }
 
     public double Get_gia_mua() {
@@ -70,8 +83,8 @@ public abstract class Device {
     }
 
     public void Set_gia_mua(double Gia_mua) {
-        if (Gia_mua <= 0) {
-            throw new IllegalArgumentException("Giá mua phải lớn hơn 0");
+        if (!Double.isFinite(Gia_mua) || Gia_mua <= 0) {
+            throw new IllegalArgumentException("Giá mua phải là số hữu hạn lớn hơn 0");
         }
         this.Gia_mua = Gia_mua;
     }
@@ -81,6 +94,9 @@ public abstract class Device {
     }
 
     public void Set_trang_thai_hoat_dong(DeviceStatus Trang_thai_hoat_dong) {
+        if (Trang_thai_hoat_dong == null) {
+            throw new IllegalArgumentException("Trạng thái hoạt động không được null");
+        }
         this.Trang_thai_hoat_dong = Trang_thai_hoat_dong;
     }
 

@@ -3,7 +3,6 @@ Họ và tên: Nguyễn Quang Chiến
 MSSV: 202418853
  */
 
-
 public class Projector extends Device {
     // 2 thuộc tính của máy chiếu
     private int Do_sang;
@@ -20,11 +19,10 @@ public class Projector extends Device {
 
     @Override
     public double Tinh_chi_phi_bao_tri() {
-        double chi_phi_bao_tri = this.Get_gia_mua() * 0.07;
-
-        if (this.So_gio_su_dung_bong_den > 3000)
+        double chi_phi_bao_tri = this.Get_gia_mua() * 0.03;
+        if (this.So_gio_su_dung_bong_den > 3000) {
             chi_phi_bao_tri += 1500000;
-
+        }
         return chi_phi_bao_tri;
     }
 }
