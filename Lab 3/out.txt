@@ -1,0 +1,72 @@
+KIỂM TRA MÃ TRÙNG
+PASS: Đã có thiết bị mang mã này trong phòng
+
+Phòng máy 1
+Mã phòng: P001 - Tên phòng: Phòng máy 1 - Sức chứa: 30 - Số thiết bị: 3
+
+Danh sách thiết bị:
+Mã thiết bị: C001 - Tên thiết bị: Máy tính 1 - Năm sử dụng: 2020 - Giá mua: 10000000,00 - Trạng thái: Active - RAM: 16 GB - CPU: Intel Core i5 - GPU rời: Không
+Mã thiết bị: PR001 - Tên thiết bị: Máy in thường - Năm sử dụng: 2023 - Giá mua: 4000000,00 - Trạng thái: UnderMaintenance
+Mã thiết bị: PJ001 - Tên thiết bị: Máy chiếu 1 - Năm sử dụng: 2019 - Giá mua: 5000000,00 - Trạng thái: Active
+
+Tổng chi phí bảo trì: 2.710.000 đồng
+
+Thiết bị cần bảo trì:
+Mã thiết bị: C001 - Tên thiết bị: Máy tính 1 - Năm sử dụng: 2020 - Giá mua: 10000000,00 - Trạng thái: Active - RAM: 16 GB - CPU: Intel Core i5 - GPU rời: Không
+Mã thiết bị: PR001 - Tên thiết bị: Máy in thường - Năm sử dụng: 2023 - Giá mua: 4000000,00 - Trạng thái: UnderMaintenance
+Mã thiết bị: PJ001 - Tên thiết bị: Máy chiếu 1 - Năm sử dụng: 2019 - Giá mua: 5000000,00 - Trạng thái: Active
+
+Phòng máy 2
+Mã phòng: P002 - Tên phòng: Phòng máy 2 - Sức chứa: 20 - Số thiết bị: 2
+
+Danh sách thiết bị:
+Mã thiết bị: C002 - Tên thiết bị: Máy tính 2 - Năm sử dụng: 2024 - Giá mua: 12000000,00 - Trạng thái: Active - RAM: 32 GB - CPU: Intel Core i7 - GPU rời: Có
+Mã thiết bị: NP001 - Tên thiết bị: Máy in mạng - Năm sử dụng: 2024 - Giá mua: 8000000,00 - Trạng thái: Active - Kết nối mạng: Chưa kết nối
+
+Tổng chi phí bảo trì: 1.960.000 đồng
+
+Thiết bị cần bảo trì:
+
+ĐỐI CHIẾU CHI PHÍ
+P001: PASS — mong đợi 2.710.000, thực tế 2.710.000 đồng
+P002: PASS — mong đợi 1.960.000, thực tế 1.960.000 đồng
+
+KIỂM TRA KẾT NỐI MẠNG
+
+Thiết bị: C001
+Ban đầu chưa kết nối: true
+PASS: Địa chỉ IP không được rỗng
+Đang kết nối: true
+IP hiện tại: 192.168.1.10
+PASS: Thiết bị đang kết nối mạng
+PASS: Ngắt kết nối và xóa IP
+Kết nối lại sau khi ngắt: true
+
+Thiết bị: C002
+Ban đầu chưa kết nối: true
+PASS: Địa chỉ IP không được rỗng
+Đang kết nối: true
+IP hiện tại: 192.168.1.11
+PASS: Thiết bị đang kết nối mạng
+PASS: Ngắt kết nối và xóa IP
+Kết nối lại sau khi ngắt: true
+
+Thiết bị: NP001
+Ban đầu chưa kết nối: true
+PASS: Địa chỉ IP không được rỗng
+Đang kết nối: true
+IP hiện tại: 192.168.1.12
+PASS: Máy in đang kết nối mạng
+PASS: Ngắt kết nối và xóa IP
+Kết nối lại sau khi ngắt: true
+
+KIỂM TRA THIẾT BỊ NULL
+PASS: Thiết bị không được null
+
+KIỂM TRA TÌM VÀ XÓA
+Tìm được C001: true
+Mã không tồn tại trả về null: true
+Xóa C001 thành công: true
+C001 không còn trong phòng: true
+Xóa lại C001 trả về false: true
+Thiết bị vẫn tồn tại: Mã thiết bị: C001 - Tên thiết bị: Máy tính 1 - Năm sử dụng: 2020 - Giá mua: 10000000,00 - Trạng thái: Active - RAM: 16 GB - CPU: Intel Core i5 - GPU rời: Không
