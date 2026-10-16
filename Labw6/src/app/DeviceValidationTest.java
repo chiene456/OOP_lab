@@ -58,6 +58,12 @@ public class DeviceValidationTest {
 
         expectInvalid("Trạng thái null", () -> new TestDevice("MC01", "Micro", year, price, null));
 
+        expectInvalid("Mã rỗng", () -> new TestDevice("", "Micro", year, price, status));
+
+        expectInvalid("Tên chỉ có khoảng trắng", () -> new TestDevice("MC01", "   ", year, price, status));
+
+        expectInvalid("Năm âm", () -> new TestDevice("MC01", "Micro", -1, price, status));
+
         // Kiểm tra dữ liệu hợp lệ và xử lý khoảng trắng.
         Device valid = new TestDevice(" MC01 ", " Micro ", year, price, status);
 
@@ -68,6 +74,6 @@ public class DeviceValidationTest {
         }
         System.out.println("PASS: Khởi tạo hợp lệ");
         System.out.println(valid);
-        System.out.println("Hoàn thành 11 trường hợp kiểm thử.");
+        System.out.println("Hoàn thành 14 trường hợp kiểm thử.");
     }
 }
