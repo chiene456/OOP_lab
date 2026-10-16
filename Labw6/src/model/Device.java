@@ -8,7 +8,6 @@ package model;
 import enums.DeviceStatus;
 import java.math.BigDecimal;
 import java.time.Year;
-import java.util.Objects;
 
 // Lớp cơ sở trừu tượng của các thiết bị.
 
@@ -74,7 +73,9 @@ public abstract class Device {
     // Dành cho lớp con thực hiện chuyển trạng thái theo nghiệp vụ.
 
     protected final void changeStatus(DeviceStatus newStatus) {
-        Objects.requireNonNull(newStatus, "Trạng thái thiết bị không được null.");
+        if (newStatus == null) {
+            throw new IllegalArgumentException("Trạng thái thiết bị không được null.");
+        }
         this.status = newStatus;
     }
 
