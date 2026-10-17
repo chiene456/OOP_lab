@@ -1,0 +1,29 @@
+﻿=== THÔNG TIN PHÒNG HỌC ===
+ClassRoom{roomId='P101', roomName='Phòng học 101', capacity=50, deviceCount=3}
+Device{deviceId='MC01', name='Micro không dây', yearInService=2024, purchasePrice=500000, status=AVAILABLE}
+Device{deviceId='PR01', name='Điều khiển máy chiếu', yearInService=2020, purchasePrice=300000, status=AVAILABLE}
+Device{deviceId='AC01', name='Điều khiển điều hòa', yearInService=2025, purchasePrice=200000, status=AVAILABLE}
+Tổng chi phí bảo trì năm: 38000.00
+
+=== THIẾT BỊ CẦN BẢO TRÌ ===
+Device{deviceId='PR01', name='Điều khiển máy chiếu', yearInService=2020, purchasePrice=300000, status=AVAILABLE}
+
+=== MƯỢN VÀ TRẢ THIẾT BỊ ===
+Trả điều khiển máy chiếu đúng hạn, phí: 0
+Trả micro muộn 2 ngày, phí: 20000
+Tổng phí phiếu PM01: 20000
+
+=== PHIẾU CÓ THIẾT BỊ ĐÃ TRẢ MUỘN ===
+BorrowingSlip{slipId='PM01', borrower='Nguyễn Văn An', teachingRoom='P101', borrowedDate=2026-10-17, itemCount=2}
+
+=== PHIẾU CÓ THIẾT BỊ CHƯA TRẢ ===
+BorrowingSlip{slipId='PM02', borrower='Trần Thị Bình', teachingRoom='P101', borrowedDate=2026-10-17, itemCount=1}
+  BorrowItem{deviceId='AC01', borrowedDate=2026-10-17, dueDate=2026-10-18, returnedDate=null}
+
+=== TÌM VÀ XÓA THIẾT BỊ KHỎI PHÒNG ===
+Tìm MC01: Device{deviceId='MC01', name='Micro không dây', yearInService=2024, purchasePrice=500000, status=AVAILABLE}
+Xóa MC01: true
+Tìm MC01 sau khi xóa: null
+Micro vẫn tồn tại: Device{deviceId='MC01', name='Micro không dây', yearInService=2024, purchasePrice=500000, status=AVAILABLE}
+
+Kết thúc chương trình.

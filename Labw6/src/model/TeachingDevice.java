@@ -7,6 +7,7 @@ package model;
 
 import enums.DeviceStatus;
 import java.math.BigDecimal;
+import exception.DeviceUnavailableException;
 
 // Lớp cơ sở trừu tượng của các thiết bị được phép mượn.
 public abstract class TeachingDevice extends Device {
@@ -37,5 +38,21 @@ public abstract class TeachingDevice extends Device {
 
     public BigDecimal getLateFeePerDay() {
         return lateFeePerDay;
+    }
+
+    // Chỉ cho mượn thiết bị đang sẵn sàng.
+    public final void markAsBorrowed() {
+        if (getStatus() != DeviceStatus.AVAILABLE) {
+            throw new DeviceUnavailableException(getDeviceId(), getStatus());
+        }
+        changeStatus(DeviceStatus.BORROWED);
+    }
+
+    // Chỉ chuyển về sẵn sàng khi thiết bị đang được mượn.
+    public final void markAsAvailable() {
+        if (getStatus() != DeviceStatus.BORROWED) {
+            throw new IllegalStateException("Thiết bị không ở trạng thái đang mượn: " + getDeviceId());
+        }
+        changeStatus(DeviceStatus.AVAILABLE);
     }
 }
