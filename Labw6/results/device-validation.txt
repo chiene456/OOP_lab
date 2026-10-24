@@ -1,0 +1,16 @@
+﻿PASS: Mã null -> Mã thiết bị không được rỗng.
+PASS: Mã chỉ có khoảng trắng -> Mã thiết bị không được rỗng.
+PASS: Tên null -> Tên thiết bị không được rỗng.
+PASS: Tên rỗng -> Tên thiết bị không được rỗng.
+PASS: Năm bằng 0 -> Năm sử dụng phải từ 1 đến 2026.
+PASS: Năm trong tương lai -> Năm sử dụng phải từ 1 đến 2026.
+PASS: Giá null -> Giá mua phải lớn hơn 0.
+PASS: Giá bằng 0 -> Giá mua phải lớn hơn 0.
+PASS: Giá âm -> Giá mua phải lớn hơn 0.
+PASS: Trạng thái null -> Trạng thái thiết bị không được null.
+PASS: Mã rỗng -> Mã thiết bị không được rỗng.
+PASS: Tên chỉ có khoảng trắng -> Tên thiết bị không được rỗng.
+PASS: Năm âm -> Năm sử dụng phải từ 1 đến 2026.
+PASS: Khởi tạo hợp lệ
+Device{deviceId='MC01', name='Micro', yearInService=2026, purchasePrice=500000, status=AVAILABLE}
+Hoàn thành 14 trường hợp kiểm thử.

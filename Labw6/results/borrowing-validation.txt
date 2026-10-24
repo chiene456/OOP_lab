@@ -1,0 +1,59 @@
+﻿
+=== LUỒNG THÀNH CÔNG ===
+PASS: Thêm đủ hai thiết bị
+PASS: Thiết bị chuyển sang BORROWED
+PASS: Ngày trả ban đầu là null
+PASS: Hạn trả được tính đúng
+PASS: Trả đúng hạn có phí bằng 0
+PASS: Thiết bị trả xong về AVAILABLE
+PASS: Phiếu vẫn còn thiết bị chưa trả
+PASS: Trả muộn hai ngày có phí 20000
+PASS: Tổng phí phiếu bằng 20000
+PASS: Phiếu ghi nhận trả muộn
+PASS: Không còn thiết bị chưa trả
+
+=== LỖI KHI MƯỢN ===
+PASS: Mượn thiết bị đang bảo trì — đúng ngoại lệ
+PASS: Mượn thiết bị đang bảo trì — dữ liệu giữ nguyên
+PASS: Mượn quá giới hạn ngày — đúng ngoại lệ
+PASS: Mượn quá giới hạn ngày — dữ liệu giữ nguyên
+PASS: Số ngày mượn bằng 0 — đúng ngoại lệ
+PASS: Số ngày mượn bằng 0 — dữ liệu giữ nguyên
+PASS: Số ngày mượn âm — đúng ngoại lệ
+PASS: Số ngày mượn âm — dữ liệu giữ nguyên
+PASS: Thiết bị null — đúng ngoại lệ
+PASS: Thiết bị null — dữ liệu giữ nguyên
+PASS: Thêm cùng thiết bị hai lần — đúng ngoại lệ
+PASS: Thêm cùng thiết bị hai lần — dữ liệu giữ nguyên
+PASS: Thêm đối tượng khác nhưng trùng mã — đúng ngoại lệ
+PASS: Thêm đối tượng khác nhưng trùng mã — dữ liệu giữ nguyên
+PASS: Trợ giảng mượn thiết bị thứ ba — đúng ngoại lệ
+PASS: Trợ giảng mượn thiết bị thứ ba — dữ liệu giữ nguyên
+
+=== LỖI KHI TRẢ ===
+PASS: Trả thiết bị không thuộc phiếu — đúng ngoại lệ
+PASS: Trả thiết bị không thuộc phiếu — dữ liệu giữ nguyên
+PASS: Ngày trả trước ngày mượn — đúng ngoại lệ
+PASS: Ngày trả trước ngày mượn — dữ liệu giữ nguyên
+PASS: Ngày trả null — đúng ngoại lệ
+PASS: Ngày trả null — dữ liệu giữ nguyên
+PASS: Trả cùng thiết bị hai lần — đúng ngoại lệ
+PASS: Trả cùng thiết bị hai lần — dữ liệu giữ nguyên
+
+=== QUẢN LÝ PHÒNG ===
+PASS: Phòng có ba thiết bị
+PASS: Tìm thiết bị theo mã
+PASS: Tìm mã không có trả null
+PASS: Tính bảo trì bằng đa hình
+PASS: Đúng 5 năm chưa thuộc nhóm thiết bị cũ
+PASS: Trên 5 năm cần bảo trì
+PASS: Đang bảo trì được đưa vào danh sách
+PASS: Không thêm thiết bị trùng mã vào phòng
+PASS: Không thêm thiết bị null vào phòng
+PASS: Không sửa trực tiếp danh sách bên ngoài
+PASS: Xóa thiết bị thành công
+PASS: Thiết bị không còn trong phòng
+PASS: Xóa mã không tồn tại trả false
+PASS: Xóa khỏi phòng không đổi trạng thái thiết bị
+
+Hoàn thành 49 phép kiểm tra.
