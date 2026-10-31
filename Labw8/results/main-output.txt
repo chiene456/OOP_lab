@@ -1,0 +1,21 @@
+--- Đổi trạng thái ---
+--- Máy chiếu ---
+[WARNING] PRJ-01: Pin xuống thấp (15%).
+[CRITICAL] PRJ-01: Pin đã hết (0%).
+--- Điều hòa ---
+[CRITICAL] AC-01: Điều hòa phòng A101 không phản hồi.
+--- Micro ---
+[WARNING] MIC-01: Pin micro thấp (25%).
+[CRITICAL] MIC-01: Micro mất tín hiệu (0%).
+CRITICAL: MIC-01 - Micro mất tín hiệu (0%).
+--- Giá trị không hợp lệ ---
+Lỗi: PRJ-01, giá trị 101: Mức pin phải trong khoảng 0-100, nhận được 101.
+Pin vẫn là 0 (đối tượng không hỏng).
+
+--- Audit ---
+2026-10-31T08:02:34.368715360: PRJ-01, AVAILABLE -> BORROWED
+
+--- Maintenance ---
+Maintenance request for PRJ-01: Pin đã hết (0%).
+Maintenance request for AC-01: Điều hòa phòng A101 không phản hồi.
+Maintenance request for MIC-01: Micro mất tín hiệu (0%).

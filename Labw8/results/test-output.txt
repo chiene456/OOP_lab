@@ -1,0 +1,67 @@
+== Đổi trạng thái ==
+PASS: Thiết bị mới có trạng thái AVAILABLE
+PASS: Đổi sang cùng trạng thái: không phát event
+PASS: Đổi trạng thái thật: phát đúng 1 event
+PASS: Event chứa trạng thái cũ/mới đúng
+PASS: Trạng thái đã cập nhật TRƯỚC khi phát event
+PASS: Đổi trùng lần nữa: vẫn chỉ 1 event
+== ProjectorRemote ==
+PASS: Pin 100 -> 20 (biên an toàn): không cảnh báo
+PASS: Pin 20 -> 19: 1 cảnh báo WARNING
+PASS: Pin 19 -> 10 (cùng vùng): không cảnh báo lại
+PASS: Pin 10 -> 0: thêm 1 cảnh báo CRITICAL
+PASS: Pin tăng lại 0 -> 50: không cảnh báo
+PASS: Pin 15 -> 0: đúng MỘT cảnh báo (CRITICAL)
+PASS: Pin 100 -> 0 trực tiếp: đúng MỘT cảnh báo CRITICAL
+== AirConditionerRemote ==
+PASS: Thiết bị mới ở trạng thái phản hồi
+PASS: Phản hồi -> phản hồi: không cảnh báo
+PASS: Phản hồi -> không phản hồi: 1 cảnh báo CRITICAL
+PASS: Vẫn không phản hồi: không phát lặp
+PASS: Không phản hồi -> phản hồi: không cảnh báo
+PASS: Mất phản hồi lần hai: cảnh báo lại
+== WirelessMicrophone ==
+PASS: Pin 30 (biên): không cảnh báo
+PASS: Pin 29: WARNING
+PASS: Tín hiệu 40 (biên): không cảnh báo
+PASS: Tín hiệu 39: WARNING
+PASS: Hai điều kiện cùng lúc (pin 25, tín hiệu 30): 2 cảnh báo WARNING
+PASS: Pin = 0: CRITICAL
+PASS: Tín hiệu = 0: CRITICAL
+== InvalidDeviceReadingException ==
+PASS: Pin 101: ném InvalidDeviceReadingException
+PASS: Ngoại lệ lưu đúng deviceId và giá trị sai
+PASS: Sau khi ném lỗi: pin không đổi (đối tượng không hỏng)
+PASS: Sau khi ném lỗi: không có cảnh báo
+PASS: Pin -1: ném ngoại lệ
+PASS: Pin 100 (biên trên) hợp lệ
+PASS: Pin 0 (biên dưới) hợp lệ
+PASS: Tín hiệu 101: ném ngoại lệ
+PASS: Tín hiệu không đổi sau lỗi
+PASS: Constructor với pin 150: ném ngoại lệ
+== Nhiều subscriber / subscriber ném lỗi ==
+[Lỗi subscriber] subscriber B lỗi (cố ý)
+PASS: Một event có nhiều subscriber: A và C đều nhận
+PASS: Subscriber ném lỗi không chặn subscriber sau nó
+PASS: Publisher không bị ảnh hưởng: pin đã cập nhật
+== FilteredAlertSubscriber ==
+PASS: Filter chặn cảnh báo WARNING
+PASS: Filter cho qua cảnh báo CRITICAL
+PASS: Sau khi gỡ đăng ký: không nhận thêm
+PASS: Filter null bị từ chối
+== DeviceMonitoringCoordinator ==
+PASS: Subscribe nhiều lần: audit chỉ ghi 1 dòng
+[CRITICAL] AC1: Điều hòa phòng A101 không phản hồi.
+PASS: Subscribe nhiều lần: 1 yêu cầu bảo trì cho cảnh báo Critical
+[WARNING] P1: Pin xuống thấp (10%).
+PASS: MaintenanceService bỏ qua cảnh báo Warning
+PASS: Unsubscribe: không ghi thêm audit
+PASS: Unsubscribe: không tạo thêm yêu cầu bảo trì
+PASS: Subscribe lại sau Unsubscribe hoạt động
+PASS: close() gọi unsubscribe(): không ghi thêm sau khi đóng
+== Hủy đăng ký bằng lambda ==
+PASS: remove bằng lambda mới không gỡ được lambda cũ (vẫn nhận 1 lần)
+PASS: Giữ tham chiếu handler: đăng ký hai lần chỉ nhận 1 lần
+PASS: Giữ tham chiếu handler: remove gỡ đúng
+
+Tổng kết: 53 đạt, 0 không đạt.
